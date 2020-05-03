@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main(){
+    int n;
+    scanf("%d",&n);
+    double sum=0.0,i=1.0;
+    int g;
+    for(g=1;g<=n;g++){
+        if(g%2==1){
+        sum=sum+(1.0/i);
+        }else{
+            sum=sum-(1.0/i);
+        }
+        i=i+3.0;
+    }
+    printf("sum = %.3lf",sum);
+    return 0;
+}
