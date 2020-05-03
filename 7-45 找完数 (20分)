@@ -1,0 +1,57 @@
+#include<stdio.h>
+int main(){
+    int j,a,b,n,m,f=0,sum=0;
+    scanf("%d %d",&a,&b);
+    int i;
+    i=a;
+    j=a;
+    while(a<=b&&a>1&&b<=10000){
+        
+       do{
+           
+           
+           if(i%j!=0){
+               sum=sum;
+           }else if(i%j==0){
+               m=i/j;
+               if(m==i){
+                   m=0;
+               }
+               sum=sum+m;
+               
+           }
+           j--;
+           
+       }while(j>0);
+       
+       
+       if(sum==a){
+       	   f=1;
+           j=sum;
+           printf("%d =",sum);
+           do{
+               m=i/j;
+               if(j>2&&i%j==0&&m!=i){
+                   printf(" %d ",m);
+                   printf("+");
+                   }else if(j==2){
+                       printf(" %d\n",m);
+                   
+               }
+               
+               j--;
+           }while(j>0);
+           sum=0;
+           a=a+1;
+       }else{
+          
+           sum=0;
+           a=a+1;
+       }
+       i=a;
+       j=a;
+    }if(f==0&&a>1&&b<=10000){
+    	printf("None");
+	}
+    return 0;
+}
