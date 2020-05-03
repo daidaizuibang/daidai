@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main(){
+    double a=1.0,b=1.0,c=1.0,d;
+    int n,m;
+    scanf("%d %d",&m,&n);
+    if(n>m){
+        double i=1.0;
+        while(n>=i){
+            a=a*i;
+            i++;
+        }
+        i=1.0;
+        while((n-m)>=i){
+            b=b*i;
+            i++;
+        }
+        i=1.0;
+        while(m>=i){
+            c=c*i;
+            i++;
+        }
+    }
+    d=a/(b*c);
+    printf("result = %.0lf",d);
+    return 0;
+}
