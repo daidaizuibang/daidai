@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main(){
+    int n;
+    double a=1.0,sum=1.0;
+    scanf("%d",&n);
+    double i;
+    int g;
+    for(g=1;g<=n;g++){
+    for(i=1.0;i<=g;i++){
+        a=a*i;
+    }
+    sum=sum+(1/a);
+    a=1.0;
+    }
+    printf("%.8lf",sum);
+    return 0;
+}
