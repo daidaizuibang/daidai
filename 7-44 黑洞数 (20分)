@@ -1,0 +1,59 @@
+#include<stdio.h>
+
+
+int main(){
+    int a,i=1,e,f,g,max,min,mid,b,c,d;
+    scanf("%d",&a);
+    b=a/100;
+    c=a%10;
+    d=(a/10)%10;
+    if(b==d&&c==d){
+        printf("1: %d - %d = 0",a);
+    }
+   while(i>0){
+    
+	if(b>=c && c>=d)
+	{
+	max=b;mid=c;min=d;
+	}else if(b>=c && b>=d && d>=c)
+	{
+	max=b;mid=d;min=c;
+	}else if(c>=b && b>=d)
+	{
+	max=c;mid=b;min=d;
+	}else if(c>=b && c>=d && d>=b)
+	{
+	max=c;mid=d;min=b;
+	}else if(d>=b && b>=c)
+	{
+	max=d;mid=b;min=c;
+	}else if(d>=b && d>=c && c>=b)
+	{
+	max=d;mid=c;min=b;
+	}
+
+    for(i;i>0;i++){
+        e=max*100+mid*10+min;
+        if(mid==0){
+            f=min*10+max;
+        }else if(min==0){
+            f=mid*10+max;
+        }else{
+        f=min*100+mid*10+max;
+        }
+        g=e-f;
+        a=g;
+        b=a/100;
+    c=a%10;
+    d=(a/10)%10;
+        printf("%d: %d - %d = %d\n",i,e,f,g);
+        break;
+        }
+        i++;
+        if(g==495){
+            break;
+   }
+    }
+    
+    return 0;
+}
